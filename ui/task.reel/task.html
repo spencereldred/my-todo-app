@@ -9,12 +9,23 @@
             "properties": {
                 "element": {"#": "owner"}
             }
+        },
+        "checkbox": {
+            "prototype": "digit/ui/checkbox.reel",
+            "properties": {
+                "element": {"#": "checkbox"},
+                "checked": true
+            },
+            "bindings": {
+                "checked": {"<->": "@owner.task.completed"}
+            }
         }
     }
     </script>
 </head>
 <body>
     <div data-montage-id="owner" class="Task">
+        <input type="checkbox" data-montage-id="checkbox">
     </div>
 </body>
 </html>
